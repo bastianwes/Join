@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/img/Logo for Favicon.png">
+    <link rel="stylesheet" href="../css/signUp.css">
+    <script src="../js/utilities.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/register.js"></script>
+    <title>Join</title>
+
+</head>
+
+<body>
+    <div class="signUpPage">
+        <div class="signUpHeader">
+            <img src="../assets/img/Capa 2.png" alt="">
+        </div>
+        <form onsubmit="addUser() ; return false;" id="content">
+            <div class="signUpBox">
+                <div class="headigContainer">
+                    <a class="arrow" href="../html/index.html">
+                        <img src="../assets/img/arrow-left-line.png" alt="">
+                    </a>
+                    <h1>Sign up</h1>
+                </div>
+                <div class="allInputContainer">
+                    <div class="inputContainer">
+                        <input id="inputName" type="text" placeholder="Name" required>
+                        <img class="inputImage" src="../assets/img/person.png" alt="">
+                    </div>
+                    <div class="inputContainer">
+                        <input id="inputEmail" type="email" placeholder="Email" required>
+                        <img class="inputImage" src="../assets/img/mail.png" alt="">
+                    </div>
+                    <div class="inputContainer">
+                        <input id="passwordlockPngP" minlength="8" type="password" onclick="changeImg('lockPngP')"
+                            placeholder="Password" required>
+                        <img id="lockPngP" class="inputImage" src="../assets/img/lock.png" alt="">
+                    </div>
+                    <div class="inputContainer">
+                        <input id="passwordlockPngC" minlength="8" type="password" onclick="changeImg('lockPngC')"
+                            placeholder="Confirm Password" required>
+                        <img id="lockPngC" class="inputImage" src="../assets/img/lock.png" alt="">
+                    </div>
+                </div>
+                <div class="checkboxDiv">
+                    <input id="inputCheckbox" type="checkbox">
+                    <p>
+                        I accept the
+                        <a href="../html\privacy_policy2.html">Privacy policy</a>
+                    </p>
+                </div>
+                <div class="buttonsContainer">
+                    <button class="signUpButton"> Sign up</button>
+                </div>
+            </div>
+        </form>
+        <div class="SignUpFooter">
+            <a href="../html/privacy_policy2.html" target=”_blank”>Privacy Policy</a>
+            <a href="../html/legal_notice2.html" target=”_blank”>Legal notice</a>
+        </div>
+        <div id="success-lightbox" class="success-lightbox">
+            <div id="success" class="success">
+                <button>You Signed Up successfully</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

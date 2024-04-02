@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/img/Logo for Favicon.png">
+    <title>Join</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/api.js"></script>
+    <script src="../js/utilities.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="login-header">
+        <img src="../assets/img/Capa 2.png" alt="">
+
+        <div class="signup">
+            <div class="p-button">
+                <p>Not a Join user?</p>
+                <a href="../html/signup.html">
+                    <button class="button">Sign up</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <form id="content" onsubmit="checkLogin(); return false;">
+        <div class="main-login">
+            <div class="heading-container">
+                <h1>Log in</h1>
+            </div>
+            <div class="inputContainer">
+                <div class="inputEmailContainer">
+                    <input id="inputEmail" type="email" placeholder="Email" required>
+                    <img class="inputImg" src="../assets/img/mail.png" alt="">
+                </div>
+                <div class="inputPasswordContainer">
+                    <input id="inputPassword" type="password" minlength="8" onclick="changeImg()" placeholder="Password"
+                        required>
+                    <img id="lockPng" class="inputImg" src="../assets/img/lock.png" alt="">
+                </div>
+            </div>
+            <div id="errorInfo"></div>
+            <div id="checkboxDiv">
+                <input id="loginCheckbox" type="checkbox">
+                <p>Remember me</p>
+            </div>
+            <div id="buttonsContainer">
+                <button type="submit" class="button">Log in</button>
+                    <div class="guestButton" onclick="guestLogin()">Guest Log in</div>
+                </a>
+            </div>
+        </div>
+    </form>
+    <div class="signupMobile">
+        <div class="p-button">
+            <p>Not a Join user?</p>
+            <a href="../html/signup.html">
+                <button class="button">Sign up</button>
+            </a>
+        </div>
+    </div>
+    <div class="login-footer">
+        <a href="../html/privacy_policy2.html" target=”_blank”>Privacy Policy</a>
+        <a href="../html/legal_notice2.html" target=”_blank”>Legal notice</a>
+    </div>
+    <div class="logoAnimation">
+        <img src="../assets/img/Capa 2.png" alt="">
+    </div>
+</body>
+
+</html>

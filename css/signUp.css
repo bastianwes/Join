@@ -1,0 +1,269 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F6F7F8;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.signUpPage {
+    overflow: hidden;
+    min-height: 100vh;
+
+}
+
+.signUpHeader {
+    padding: 67px 122px 63px 77px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.signUpBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 652px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    padding: 48px 0;
+    margin: 0 16px;
+}
+
+.headigContainer {
+    display: flex;
+    position: relative;
+    line-height: 72px;
+    border-bottom: 3px solid #29ABE2;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    left: -71%;
+}
+
+h1 {
+    font-size: 61px;
+    margin: 0;
+}
+
+.allInputContainer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    flex-direction: column;
+    width: 422px;
+}
+
+.inputContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+#inputName,
+#inputEmail,
+#passwordlockPngP,
+#passwordlockPngC {
+    height: 44px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    font-size: 20px;
+    text-indent: 20px;
+}
+
+.inputImage {
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+}
+
+.checkboxDiv {
+    display: flex;
+    gap: 8px;
+    margin-top: 36px;
+    width: 422px;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: 0;
+}
+
+.checkboxDiv a {
+    text-decoration: none;
+    color: #5EC0E9;
+}
+
+.checkboxDiv a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 32px;
+}
+
+.signUpButton {
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-size: 21px;
+    font-weight: 700;
+    background-color: #2A3647;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.SignUpFooter {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    color: #A8A8A8;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 80px 0 32px 0;
+}
+
+.SignUpFooter a {
+    text-decoration: none;
+    padding: 8px;
+    color: #b2b2b2;
+}
+
+.SignUpFooter a:hover {
+    color: #5EC0E9;
+    font-weight: bold;
+}
+
+.success-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.success {
+    height: 100%;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.success button {
+    display: flex;
+    padding: 15px 24px;
+    border-radius: 8px;
+    background-color: #2A3647;
+    color: white;
+    height: 48px;
+    line-height: 10px;
+    font-size: 21px;
+}
+
+@media (max-width: 600px) {
+    .signUpHeader {
+        padding: 37px 122px 63px 38px;
+    }
+
+    .signUpHeader img {
+        width: 64px;
+
+    }
+
+    .arrow {
+        left: -60%;
+    }
+
+    #content {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 560px) {
+    .arrow {
+        left: -40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .allInputContainer {
+        width: 380px;
+    }
+}
+
+@media (max-width: 450px) {
+    .signUpBox {
+        width: 90%;
+    }
+
+    .arrow {
+        left: -30%;
+    }
+
+    .allInputContainer {
+        width: 350px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .allInputContainer {
+        width: 330px;
+    }
+
+    .headigContainer h1 {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .allInputContainer {
+        width: 300px;
+    }
+}
+
+@media (max-width: 360px) {
+    .allInputContainer {
+        width: 280px;
+    }
+
+    .headigContainer h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 340px) {
+    .allInputContainer {
+        width: 250px;
+    }
+}

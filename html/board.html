@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/img/Logo for Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Join</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/add_task.css">
+    <link rel="stylesheet" href="../css/board.css">
+    <script src="../js/api.js"></script>
+    <script src="../js/utilities.js"></script>
+    <script src="../js/openPopup.js"> </script>
+    <script src="../js/taskDetails.js"> </script>
+    <script src="../js/taskDetails_2.js"> </script>
+    <script src="../js/taskDetails_3.js"> </script>
+    <script src="../js/taskQuickLook.js"> </script>
+    <script src="../js/board_1.js"></script>
+    <script src="../js/board.js"></script>
+</head>
+
+<body onload="initBoard()">
+    <header>
+        <img class="logoHeaderMobile" src="../assets/img/Capa 3 mobile.png" alt="">
+        <span class="header-text">Kanban Project Management Tool</span>
+        <div class="header-icons">
+            <a href="help.html"><img src="../assets/img/help.svg" class="help-icon"></a>
+        </div>
+        <div onclick="overlayHeaderShow()" class="group-icon ">
+            <span id="userLetter"></span>
+        </div>
+        <div id="overlay-header" class="overlay-header  overlay-hidden">
+            <a href="../html/help.html">Help</a>
+            <a href="../html/legal_notice.html">Legal Notice</a>
+            <a href="../html/privacy_policy.html">Privacy Policy</a>
+            <a href="../html/index.html">
+                <p>Log out</p>
+            </a>
+        </div>
+    </header>
+    <div id="mainboard" class="mainBoard">
+        <div class="boardTop">
+            <h1 class="boardTitle">Board</h1>
+            <div class="boardTopRight">
+                <input class="inputBoardTop" type="text" placeholder="Find Task" onkeyup="searchTask()" required>
+                <button id="addTaskBtn" onclick="handleClick()">
+                    <span id="text">Add Task</span>
+                    <img src="../assets/img/add.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="boardContainer">
+            <div id="toDo" class="boardTasks">
+                <div class="boardTaskTitel">
+                    <p>To Do</p>
+                    <div class="addTask" onclick="openTaskDetailPopup(null, reRenderTasksInBoard)">+</div>
+                </div>
+                <div class="noTask">
+                    <p>No Tasks in To Do</p>
+                </div>
+                <div class="dragArea" id="toDo-tasklist">
+                    <p></p>
+                </div>
+            </div>
+            <div id="inProgress" class="boardTasks">
+                <div class="boardTaskTitel">
+                    <p>In progress</p>
+                    <div class="addTask" onclick="openTaskDetailPopup(null, reRenderTasksInBoard)">+</div>
+                </div>
+                <div class="noTask">
+                    <p>No Tasks in Progress</p>
+                </div>
+                <div class="dragArea" id="inProgress-tasklist"></div>
+            </div>
+            <div id="awaitFeedback" class="boardTasks">
+                <div class="boardTaskTitel">
+                    <p>Await feedback</p>
+                    <div class="addTask" onclick="openTaskDetailPopup(null, reRenderTasksInBoard)">+</div>
+                </div>
+                <div class="noTask">
+                    <p>No Tasks in Await Feedback</p>
+                </div>
+                <div class="dragArea" id="awaitFeedback-tasklist"></div>
+            </div>
+            <div id="done" class="boardTasks-done">
+                <div class="boardTaskTitel">
+                    <p>Done</p>
+                </div>
+                <div class="noTask">
+                    <p>No Tasks in Done</p>
+                </div>
+                <div class="dragArea" id="done-tasklist"></div>
+            </div>
+        </div>
+    </div>
+    <nav class="nav-board">
+        <div class="logo"><img src="../assets/img/Capa .png"></div>
+        <div class="nav-flex-box">
+            <div class="tools">
+                <a href="summary.html" class="nav-sub"><img src="../assets/img/Icons.svg">Summary</a>
+                <a href="add_task.html" class="nav-sub"><img src="../assets/img/addTask.svg">Add Task</a>
+                <a href="board.html" class="nav-sub" style="background-color: #091931;"><img
+                        src="../assets/img/board.svg">Board</a>
+                <a href="contacts.html" class="nav-sub"><img src="../assets/img/contact.svg">Contacts</a>
+            </div>
+            <div class="nav-bottom">
+                <a href="../html/privacy_policy.html" class="nav-bottom-a">Privacy policy</a>
+                <a href="../html/legal_notice.html" class="nav-bottom-a">Legal Notice</a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

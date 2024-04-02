@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/img/Logo for Favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <script src="../js/api.js"></script>
+    <script src="../js/utilities.js"></script>
+    <script src="../js/contacts.js"></script>
+    <title>Contacts</title>
+</head>
+
+<body onload="initContacts()">
+    <header>
+        <img class="logoHeaderMobile" src="../assets/img/Capa 3 mobile.png" alt="">
+        <span class="header-text">Kanban Project Management Tool</span>
+        <div class="header-icons">
+            <a href="help.html"><img src="../assets/img/help.svg" class="help-icon"></a>
+        </div>
+        <div onclick="overlayHeaderShow()" class="group-icon ">
+            <span id="userLetter"></span>
+        </div>
+        <div id="overlay-header" class="overlay-header  overlay-hidden">
+            <a href="../html/help.html">Help</a>
+            <a href="../html/legal_notice.html">Legal Notice</a>
+            <a href="../html/privacy_policy.html">Privacy Policy</a>
+            <a href="../html/index.html">
+                <p>Log out</p>
+            </a>
+        </div>
+    </header>
+    <nav>
+        <div class="logo"><img src="../assets/img/Capa .png"></div>
+        <div class="nav-flex-box">
+            <div class="tools">
+                <a href="summary.html" class="nav-sub"><img src="../assets/img/Icons.svg">Summary</a>
+                <a href="add_task.html" class="nav-sub"><img src="../assets/img/addTask.svg">Add Task</a>
+                <a href="board.html" class="nav-sub"><img src="../assets/img/board.svg">Board</a>
+                <a href="contacts.html" class="nav-sub" style="background-color: #091931;"><img
+                        src="../assets/img/contact.svg">Contacts</a>
+            </div>
+            <div class="nav-bottom">
+                <a href="../html/privacy_policy.html" class="nav-bottom-a">Privacy policy</a>
+                <a href="../html/legal_notice.html" class="nav-bottom-a">Legal Notice</a>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="contact-menu" id="content">
+            <div class="button-background">
+                <div class="add-button" onclick="openContactOverlay()">
+                    Add new contact <img src="../assets/img/person_add.svg" class="img-add-contact">
+                </div>
+            </div>
+            <div id="new-contacts">
+            </div>
+            <div id="add-button-mobile" onclick="openContactOverlay()">
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="headline-flex-box">
+                <h1 class="headline-contacts">Contacts </h1>
+                <div class="separator"></div>
+                <h2 class="subheadline">Better with a team</h2>
+                <div class="separator-mobile"></div>
+
+            </div>
+            <div id="show-contact" class="slide-contact-info"></div>
+        </div>
+    </div>
+    <div id="overlay-add-contact">
+        <div class="add-contact-left-container">
+            <img src="../assets/img/Capa 1.svg" class="overlay-logo" alt="logo-image">
+            <h2 class="overlay-headline">Add contact</h2>
+            <span class="overlay-text">Tasks are better with a team</span>
+            <div class="dash"></div>
+        </div>
+        <div class="flex-box-overlay">
+            <img src="../assets/img/Frame 79.svg" alt="person-image" class="over-logo-person">
+        </div>
+        <div class="input-fields">
+            <div class="close-button" onclick="hideOverlayAdd()"><img src="../assets/img/close.svg" alt="close-button">
+            </div>
+            <form onsubmit="saveContact(); return false">
+                <input required="" class="input person-icon" id="add-name" type="text" placeholder="Name"
+                    pattern="[A-Za-zÄäÖöÜüß ]+" maxlength="23">
+                <input required="" class="input email-icon" id="add-email" type="email" placeholder="Email"
+                    maxlength="23">
+                <input required="" class="input phone-icon" type="tel" id="add-phone" placeholder="Phone"
+                    pattern="[0-9+\s ]*" maxlength="24">
+                <div class="overlay-buttons buttons-margin-left">
+                    <button class="cancel-button">Cancel
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.2496 11.9998L17.4926 17.2428M7.00659 17.2428L12.2496 11.9998L7.00659 17.2428ZM17.4926 6.75684L12.2486 11.9998L17.4926 6.75684ZM12.2486 11.9998L7.00659 6.75684L12.2486 11.9998Z"
+                                stroke="#2A3647" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <button id="registerBtn" class="create-button" type="submit">
+                        Create contact
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div id="overlay-edit-contact">
+        <div class="add-contact-left-container" id="edit-container">
+            <img src="../assets/img/Capa 1.svg" class="overlay-logo" alt="logo-image">
+            <h2 class="overlay-headline">Edit contact</h2>
+            <div class="dash"></div>
+        </div>
+        <div class="flex-box-overlay">
+            <div id="change-color-icon">
+                <div class="big-contact-icon" id="color-icon-change-0" style="background-color: rgb(196, 43, 36);">A
+                </div>
+            </div>
+        </div>
+        <div class="close-button" onclick="hideOverlayEdit()"><img src="../assets/img/close.svg" alt="close-button">
+        </div>
+        <div class="input-fields">
+            <div id="edit-input-fields">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

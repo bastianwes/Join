@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/img/Logo for Favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/summery.css">
+    <script src="../js/api.js"></script>
+    <script src="../js/utilities.js"></script>
+    <script src="../js/summary.js"></script>
+    <title>Summary</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <img class="logoHeaderMobile" src="../assets/img/Capa 3 mobile.png" alt="">
+        <span class="header-text">Kanban Project Management Tool</span>
+        <div class="header-icons">
+            <a href="help.html"><img src="../assets/img/help.svg" class="help-icon"></a>
+        </div>
+        <div onclick="overlayHeaderShow()" class="group-icon ">
+            <span id="userLetter"></span>
+        </div>
+        <div id="overlay-header" class="overlay-header  overlay-hidden">
+            <a href="../html/help.html">Help</a>
+            <a href="../html/legal_notice.html">Legal Notice</a>
+            <a href="../html/privacy_policy.html">Privacy Policy</a>
+            <a href="../html/index.html">
+                <p>Log out</p>
+            </a>
+        </div>
+    </header>
+    <div class="summaryHeadline">
+        <h1>Join 360</h1>
+        <hr class="blueLine">
+        <span>Key Metrics at a Glance</span>
+        <hr class="blueLineMobile">
+    </div>
+    <div class="summaryMainContainer">
+        <div class="leftSideOfContainer">
+            <div class="todoAndDone">
+                <div class="todo" onclick="toBoard(1)">
+                    <svg width="69" height="70" viewBox="0 0 69 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="34.5" cy="35" r="34.5" fill="currentColor" />
+                        <mask id="mask0_137015_6083" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="18" y="19"
+                            width="33" height="32">
+                            <rect x="18.5" y="19" width="32" height="32" fill="currentColor" />
+                        </mask>
+                        <g mask="url(#mask0_137015_6083)">
+                            <path
+                                d="M25.1667 44.3332H27.0333L38.5333 32.8332L36.6667 30.9665L25.1667 42.4665V44.3332ZM44.2333 30.8998L38.5667 25.2998L40.4333 23.4332C40.9444 22.9221 41.5722 22.6665 42.3167 22.6665C43.0611 22.6665 43.6889 22.9221 44.2 23.4332L46.0667 25.2998C46.5778 25.8109 46.8444 26.4276 46.8667 27.1498C46.8889 27.8721 46.6444 28.4887 46.1333 28.9998L44.2333 30.8998ZM42.3 32.8665L28.1667 46.9998H22.5V41.3332L36.6333 27.1998L42.3 32.8665Z"
+                                fill="currentColor" />
+                        </g>
+                    </svg>
+                    <div class="numberAndTodo">
+                        <h1 id="toDo">0</h1>
+                        <span>To-do</span>
+                    </div>
+                </div>
+                <div class="done" onclick="toBoard(4)">
+                    <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="35" cy="35" r="34.5" fill="currentColor" />
+                        <path d="M20.0283 35.0001L31.2571 46.0662L49.9717 23.9341" stroke="currentColor"
+                            stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <div class="numberAndDone">
+                        <h1 id="done">0</h1>
+                        <span>Done</span>
+                    </div>
+                </div>
+            </div>
+            <div class="urgentAndDeadline" onclick="toBoard(0)">
+                <div class="urgent">
+                    <div class="urgentLeftSide">
+                        <img src="../assets/img/Frame 9.svg" width="60px" height="60px">
+                        <div class="urgentAndNumber">
+                            <h1 id="urgent">0</h1>
+                            <span>Urgent</span>
+                        </div>
+                    </div>
+                    <img src="../assets/img/vertical-vector.jpg">
+                    <div class="upcomingDeadline">
+                        <p></p>
+                        <span>Upcoming Deadline</span>
+                    </div>
+                </div>
+            </div>
+            <div class="allTasks">
+                <div onclick="toBoard(0)" class="taskBoard">
+                    <h1 id="allTasks">0</h1>
+                    <span>Tasks in <br> Board</span>
+                </div>
+                <div class="taskProgress" onclick="toBoard(2)">
+                    <h1 id="inProgress">0</h1>
+                    <span>Tasks in <br> Progress</span>
+                </div>
+                <div class="awaitFeedback" onclick="toBoard(3)">
+                    <h1 id="awaitFeedback">0</h1>
+                    <span>Awaiting Feedback</span>
+                </div>
+            </div>
+        </div>
+        <div class="rightSideOfContainer">
+            <div class="greeting">
+                <h2 id="greetingTime"></h2>
+                <h1 id="userName"></h1>
+            </div>
+        </div>
+
+    </div>
+    <div class="greetingAnimation">
+        <div class="greetingMobile">
+            <h2 id="greetingTimeMobile">,</h2>
+            <h1 id="userNameMobile"></h1>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><img src="../assets/img/Capa .png"></div>
+        <div class="nav-flex-box">
+            <div class="tools">
+                <a href="summary.html" class="nav-sub" style="background-color: #091931;"><img
+                        src="../assets/img/Icons.svg">Summary</a>
+                <a href="add_task.html" class="nav-sub"><img src="../assets/img/addTask.svg">Add Task</a>
+                <a href="board.html" class="nav-sub"><img src="../assets/img/board.svg">Board</a>
+                <a href="contacts.html" class="nav-sub"><img src="../assets/img/contact.svg">Contacts</a>
+            </div>
+            <div class="nav-bottom">
+                <a href="../html/privacy_policy.html" class="nav-bottom-a">Privacy policy</a>
+                <a href="../html/legal_notice.html" class="nav-bottom-a">Legal Notice</a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+
+</html>

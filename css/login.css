@@ -1,0 +1,374 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F6F7F8;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+
+}
+
+.login-header {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 67px 122px 63px 77px;
+
+}
+
+.login-header img {
+    margin-top: 13px;
+}
+
+.p-button {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.signup p {
+    margin: 0;
+
+}
+
+.button {
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid #2A3647;
+    background-color: #2A3647;
+    color: #FFFFFF;
+
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.main-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 652px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    padding: 48px 0;
+    margin: 0 16px;
+}
+
+.heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    line-height: 72px;
+    border-bottom: 3px solid #29ABE2;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-size: 61px;
+    margin: 0;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+    flex-direction: column;
+    width: 422px;
+}
+
+.inputEmailContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+#inputEmail {
+    height: 44px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    font-size: 20px;
+    text-indent: 20px;
+}
+
+.inputImg {
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+}
+
+.inputPasswordContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+
+}
+
+#inputPassword {
+    height: 44px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    font-size: 20px;
+    text-indent: 20px;
+}
+
+#errorInfo {
+    margin-top: 32px;
+    color: red;
+    width: auto;
+}
+
+#checkboxDiv {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    width: 66%;
+}
+
+p {
+    margin: 0;
+    display: flex;
+    text-align: center;
+}
+
+#buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.guestButton {
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid #2A3647;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.login-footer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    color: #A8A8A8;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 32px;
+}
+
+.login-footer a {
+    padding: 8px;
+    color: #b2b2b2;
+}
+
+.logoAnimation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: 10;
+    opacity: 1;
+    animation-name: overlaybox;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.3s;
+}
+
+.logoAnimation img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(1.5) translate(-50%, -50%);
+    animation-name: overlaylogo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+
+}
+
+@keyframes overlaylogo {
+    from {
+        transform: scale(1.5) translate(-50%, -50%);
+    }
+
+    to {
+        transform: scale(1);
+        top: 80px;
+        left: 77px;
+    }
+}
+
+@keyframes overlaybox {
+    to {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+.signupMobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    @keyframes overlaylogo {
+        from {
+            transform: scale(1.5) translate(-50%, -50%);
+        }
+    
+        to {
+            transform: scale(0.7);
+            top: 28px;
+            left: 18px;
+        }
+    }
+    
+    @keyframes overlaybox {
+        to {
+            opacity: 0;
+            z-index: -10;
+        }
+    }
+    .logoAnimation {
+        background-color: #2A3647;
+    }
+
+    .logoAnimation img {
+        content: url('../assets/img/Capa 2 weiß.png');
+
+    }
+
+    .login-header {
+        padding: 37px 122px 63px 38px;
+    }
+
+    .login-header img {
+        width: 64px;
+
+    }
+
+    .signup {
+        display: none;
+    }
+
+    .signupMobile {
+        display: flex;
+        margin-bottom: 40px;
+        justify-content: center;
+    }
+
+    #content {
+        margin-bottom: 80px;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .inputContainer {
+        width: 380px;
+    }
+
+    #buttonsContainer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #checkboxDiv {
+        padding-left: 20px;
+        
+    }
+}
+
+@media (max-width: 440px) {
+
+    #content {
+        margin: 10px;
+    }
+
+    .inputContainer {
+        width: 350px;
+    }
+}
+
+@media (max-width: 420px) {
+    #content {
+        margin-left: 10px;
+    }
+    #errorInfo{
+        width: 380px;
+    }
+}
+
+@media (max-width: 400px) {
+    #content {
+        margin-left: 10px;
+    }
+
+    .inputContainer {
+        width: 330px;
+    }
+    #errorInfo{
+        width: 360px;
+    }
+}
+
+@media (max-width: 388px) {
+    #content {
+        margin-left: 10px;
+        margin-bottom: 60px;
+    }
+
+    .inputContainer {
+        width: 310px;
+    }
+    #errorInfo{
+        width: 340px;
+    }
+}
+
+@media (max-width: 370px) {
+    #content {
+        margin-left: 10px;
+        
+    }
+
+    .inputContainer {
+        width: 280px;
+    }
+    #errorInfo{
+        width: 300px;
+    }
+    .p-button{
+        gap: 28px;
+    }
+}

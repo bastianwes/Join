@@ -1,0 +1,197 @@
+.content {
+  margin-left: 326px;
+  margin-top: 100px;
+  width: calc(100% - 422px);
+
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-block: unset;
+  margin-bottom: 28px;
+}
+
+.content h2 {
+  font-size: 27px;
+  font-weight: 700;
+  margin-block: unset;
+}
+
+.content h3 {
+  margin-block: unset;
+  margin-top: 8px;
+}
+
+.content a {
+  text-decoration: none;
+  color: #29abe2;
+}
+
+.content a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.content p {
+  margin-block: unset;
+  margin-bottom: 24px;
+}
+
+.blue {
+  color: #29abe2;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  display: flex;
+  align-items: start;
+}
+
+.mb24 {
+  margin-bottom: 24px !important;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.mr35 {
+  margin-right: 35px;
+}
+
+.backArrowLegal {
+  width: 37px;
+  height: 37px;
+  position: fixed;
+  left: 94vw;
+  top: 15vh;
+  border-radius: 50%;
+  transition: all 150;
+}
+
+.backArrowLegal:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+  transform: scale(1.1);
+}
+
+.hyphen {
+  display: none;
+}
+
+body {
+  margin: 0;
+  background: #F5F5F5;
+}
+
+.help-main {
+  display: flex;
+  flex-direction: column;
+  padding-left: 350px;
+  padding-right: 50px;
+  height: calc(100vh - 160px);
+}
+
+.kanban-title {
+  display: none;
+  margin-top: 30px;
+}
+
+.help-back-btn {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  width: 37px;
+  height: 37px;
+  width: 100%;
+  padding-top: 40px;
+  z-index: 1;
+}
+
+.helpTitleConteiner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 81px;
+}
+
+.helpTitle {
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.contacts-background {
+  background-color: transparent !important;
+}
+
+.content-container {
+  margin-left: 270px;
+  padding: 30px;
+}
+
+.content-container p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.log-out-background:hover {
+  background-color: #2A3D59;
+}
+
+.privacy-policy-background {
+  background-color: rgb(9, 25, 49);
+}
+
+.contacts-background:hover {
+  background-color: #2A3D59;
+}
+
+.contacts-background {
+  background-color: unset;
+}
+
+.indemnity {
+  padding-bottom: 40px;
+}
+
+.lastSectionOfPtag {
+  padding-bottom: 40px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    margin: 0px;
+    width: auto;
+    padding: 20px;
+    padding-top: 110px;
+    padding-bottom: 100px;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1050px) {
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .backArrowLegal {
+    position: sticky;
+  }
+}

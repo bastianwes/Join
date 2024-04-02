@@ -1,0 +1,441 @@
+.summaryHeadline {
+  padding-top: 206px;
+  padding-left: 328px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.summaryHeadline h1 {
+  font-size: 61px;
+}
+
+.summaryHeadline hr {
+  border: 2px solid #29ABE2;
+  height: 59px;
+  border-radius: 3px;
+}
+
+.blueLineMobile {
+  display: none;
+}
+
+.summaryHeadline span {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.leftSideofContainer {
+  max-width: 70%;
+}
+
+.todoAndDone {
+  padding-top: 55px;
+  padding-left: 328px;
+  display: flex;
+  gap: 32px;
+}
+
+.urgentAndDeadline {
+  padding-top: 25px;
+  padding-left: 328px;
+  display: flex;
+  gap: 80px;
+}
+
+.todoAndDone h1 {
+  font-size: 64px;
+  color: black;
+}
+
+.todo,
+.done {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  background-color: white;
+  border-radius: 30px;
+  width: 264px;
+  height: 168px;
+  transition: transform 0.3s ease;
+}
+
+.todo:hover,
+.done:hover,
+.urgent:hover,
+.taskBoard:hover,
+.taskProgress:hover,
+.awaitFeedback:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 100ms;
+  background-color: rgba(42, 54, 71, 1);
+}
+
+.todo:hover h1,
+.todo:hover span,
+.done:hover h1,
+.done:hover span,
+.urgent:hover h1,
+.urgent:hover span,
+.urgent:hover p,
+.taskBoard:hover h1,
+.taskBoard:hover span,
+.taskProgress:hover h1,
+.taskProgress:hover span,
+.awaitFeedback:hover h1,
+.awaitFeedback:hover span {
+  color: white;
+}
+
+.todo svg path,
+.done svg path {
+  color: white;
+}
+
+.todo svg circle,
+.done svg circle {
+  color: #2A3647;
+}
+
+.todo:hover svg path,
+.done:hover svg path {
+  color: #2A3647;
+}
+
+.todo:hover svg circle,
+.done:hover svg circle {
+  color: white;
+}
+
+.numberAndTodo,
+.numberAndDone {
+  text-align: center;
+}
+
+.numberAndTodo,
+.numberAndDone span {
+  font-size: 20px;
+  color: rgba(42, 54, 71, 1);
+}
+
+.urgent {
+  background-color: white;
+  width: 560px;
+  height: 168px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.urgentLeftSide {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.urgentAndNumber {
+  text-align: center;
+  color: rgba(42, 54, 71, 1);
+}
+
+.urgentAndNumber h1 {
+  font-size: 64px;
+  color: black;
+}
+
+.upcomingDeadline {
+  gap: 13px;
+}
+
+.upcomingDeadline p {
+  font-size: 21px;
+  font-weight: 700;
+  color: rgba(42, 54, 71, 1);
+  margin-bottom: 13px;
+}
+
+.upcomingDeadline span {
+  color: rgba(42, 54, 71, 1);
+}
+
+.allTasks {
+  padding-top: 25px;
+  padding-left: 328px;
+  padding-bottom: 70px;
+  display: flex;
+  gap: 28px;
+}
+
+.taskBoard,
+.taskProgress,
+.awaitFeedback {
+  padding: 25px, 0px, 25px, 0px;
+  background-color: white;
+  border-radius: 30px;
+  width: 168px;
+  height: 168px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.taskBoard,
+.taskProgress,
+.awaitFeedback span {
+  font-size: 20px;
+  color: rgba(42, 54, 71, 1);
+  text-align: center;
+}
+
+.taskBoard h1 {
+  font-size: 64px;
+  color: black;
+}
+
+.taskProgress h1 {
+  font-size: 64px;
+  color: black;
+}
+
+.awaitFeedback h1 {
+  font-size: 64px;
+  color: black;
+}
+
+.rightSideOfContainer {
+  position: relative;
+  max-width: 28%;
+  left: 950px;
+  top: -440px;
+}
+
+.greeting h1 {
+  font-size: 64px;
+  color: rgba(41, 171, 226, 1);
+  font-weight: 700;
+}
+
+.greeting h2 {
+  font-size: 47px;
+  color: rgba(42, 54, 71, 1);
+  font-weight: 500;
+}
+
+.greetingMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 80%;
+
+}
+
+.greetingMobile h1 {
+  font-size: 64px;
+  color: rgba(41, 171, 226, 1);
+  font-weight: 700;
+}
+
+.greetingMobile h2 {
+  font-size: 47px;
+  color: rgba(42, 54, 71, 1);
+  font-weight: 500;
+}
+
+.greetingAnimation {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 240px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  z-index: 10;
+  opacity: 1;
+  animation-name: overlaybox;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.3s;
+}
+
+@keyframes overlaybox {
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@media (max-width: 1300px) {
+  .greetingAnimation {
+    display: block;
+  }
+
+  .greeting {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .summaryMainContainer {
+    position: relative;
+  }
+
+  nav {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .greetingAnimation {
+    left: 0;
+    bottom: 108px;
+    height: auto;
+  }
+
+  .greetingMobile {
+    width: 100%;
+  }
+
+  .summaryHeadline h1 {
+    font-size: 47px;
+  }
+
+  .summaryHeadline span {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .todoAndDone {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .urgentAndDeadline {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .allTasks {
+    padding-left: 0;
+    justify-content: center;
+    height: 40vh;
+  }
+
+  .summaryHeadline {
+    padding-top: 150px;
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .greetingAnimation {
+    bottom: 80px;
+    height: auto;
+  }
+
+  .summaryHeadline {
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    gap: 10px;
+    justify-content: initial;
+  }
+
+  .blueLine {
+    display: none;
+  }
+
+  .blueLineMobile {
+    display: block;
+  }
+
+  .summaryHeadline hr {
+    border: 2px solid #29ABE2;
+    height: 0;
+    border-radius: 3px;
+    width: 100px;
+    margin-top: 10px;
+  }
+
+  .todoAndDone {
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+
+  .urgentAndDeadline {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .allTasks {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40vh;
+  }
+
+
+}
+
+@media (max-width: 400px) {
+
+  .numberAndTodo h1,
+  .done h1,
+  .urgent h1,
+  .allTasks h1 {
+    font-size: 35px;
+  }
+
+  .numberAndTodo span,
+  .done span,
+  .urgent span,
+  .allTasks span {
+    font-size: 15px;
+  }
+
+  .todo,
+  .done {
+    height: 140px;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .taskBoard,
+  .taskProgress,
+  .awaitFeedback {
+    height: 140px;
+  }
+
+  .todo svg,
+  .done svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .urgentLeftSide img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .urgentLeftSide {
+    gap: 5px;
+  }
+
+  .upcomingDeadline p {
+    font-size: 15px;
+  }
+
+  .urgent {
+    gap: 10px;
+  }
+}
