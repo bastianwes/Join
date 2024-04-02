@@ -1,5 +1,5 @@
 
-let API_TOKEN = 'KJUQD3VVEG97P7PWZI4BJWZ3CNGTPOCAKQX8SJI0';
+let API_TOKEN = 'G6H5RCC7UEO47QMXBY202FMRAEGY1ZC9BVC1K5C0';
 let API_URL = 'https://remote-storage.developerakademie.org/item';
 USERS_TABLE = 'users';
 TASKS_TABLE = 'tasks';
