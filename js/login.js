@@ -16,8 +16,8 @@ async function init() {
 async function guestLogin() {
     let email = '';
     let password = '';
-    email = 'guest01@guest.de';
-    password = '987654321';
+    email = 'guest02@guest.de';
+    password = 'abcabcabc';
     let inputEmail = document.getElementById('inputEmail');
     let inputPassword = document.getElementById('inputPassword');
     inputEmail.value = email;
