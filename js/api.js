@@ -251,7 +251,12 @@ async function tryRegisterUser(
   email,
   password,
 ) {
-  let existingUsers = await getItem(USERS_TABLE);
+  let existingUsers = [];
+  try {
+    existingUsers = await getItem(USERS_TABLE);
+  } catch {
+    // nothing
+  }
   for (let user of existingUsers) {
     if (user.email.toLowerCase() === email.toLowerCase()) {
       throw "This e-mail address already exists";
